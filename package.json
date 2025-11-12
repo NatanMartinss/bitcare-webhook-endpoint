@@ -1,0 +1,14 @@
+{
+  "name": "bitcare-webhook-endpoint",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "express": "^4.19.0",
+    "body-parser": "^1.20.2"
+  }
+}
