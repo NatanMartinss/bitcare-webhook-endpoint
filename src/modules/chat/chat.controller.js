@@ -6,13 +6,7 @@ export class ChatController {
 
     console.log(`[Render] Evento recebido: ${data.communicationId || "sem ID"}`);
 
-    const signature = req.headers["x-webhook-signature"];
-    if (
-      process.env.WHATSAPP_WEBHOOK_SECRET &&
-      signature !== process.env.WHATSAPP_WEBHOOK_SECRET
-    ) {
-      return res.status(403).json({ error: "Invalid signature" });
-    }
+    // Endpoint aberto: sem validação de assinatura
 
     if (process.env.FORWARD_URL) {
       axios
